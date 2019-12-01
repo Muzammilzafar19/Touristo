@@ -24,7 +24,7 @@ public class CityTourPointsAdapter extends RecyclerView.Adapter<CityTourPointsAd
     Context context;
     List<TouringPointsTable> list;
     Activity activity;
-
+//
     public CityTourPointsAdapter(Context context, List<TouringPointsTable> list,Activity activity) {
         this.context = context;
         this.list = list;
