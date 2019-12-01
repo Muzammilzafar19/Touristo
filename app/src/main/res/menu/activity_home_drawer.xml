@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_person"
+            android:title="About" />
+        <item
+            android:id="@+id/nav_helpline"
+            android:icon="@drawable/ic_phone_"
+            android:title="HelpLines" />
+        <item
+            android:id="@+id/nav_instructions"
+            android:icon="@drawable/instrac"
+            android:title="@string/menu_instruction" />
+        <item
+            android:id="@+id/nav_thingtokeep"
+            android:icon="@drawable/ic_shopping"
+            android:title="@string/menu_thingtokeep" />
+        <item
+            android:id="@+id/nav_tourType"
+            android:icon="@drawable/ic_merge_type"
+            android:title="@string/menu_tourType" />
+        <item
+            android:id="@+id/nav_spotSearch"
+            android:icon="@drawable/ic_search"
+            android:title="@string/menu_spotSearch" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_event"
+                android:icon="@drawable/ic_event"
+                android:title="@string/menu_event" />
+            <item
+
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_exit"
+                android:title="@string/menu_logout" />
+        </menu>
+    </item>
+
+</menu>

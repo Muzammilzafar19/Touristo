@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+>
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="240dp"
+    android:src="@drawable/aboutimg"
+    />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_gravity="center_horizontal"
+        android:text="About"
+        android:textSize="20dp"
+        android:textColor="#47A891"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:id="@+id/txtDescription"
+        android:layout_marginLeft="15dp"
+        android:text="The state of Punjab is renowned for its cuisine, culture and history. Punjab has a vast public transportation and communication network. Some of the main cities in Punjab are Amritsar, Jalandhar, Patiala, Pathankot and Ludhiana. Patiala is known for its historical forts. Punjab also has a rich Sikh religious history.
+Punjab receives many religious tourists, as the state is home to some of the holiest places in Sikhism, including the Harmandir Sahib and three of the five Panj Takht." />
+
+</LinearLayout>

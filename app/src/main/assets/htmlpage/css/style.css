@@ -1,0 +1,30 @@
+.header{
+	background: #e3e3e3;
+	height: 200px;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.header-content{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transform: -webkit-translate(-50%, -50%);
+	transform: -moz-translate(-50%, -50%);
+	transform: -o-translate(-50%, -50%);
+}
+
+.header-content h2{
+	background: #fff;
+	padding: 10px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+}
+
+p{
+	text-align: justify;
+}
+
