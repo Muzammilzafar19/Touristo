@@ -8,7 +8,7 @@ import com.ecomway.touristo.room.dao.TouringPointsTableDao;
 import com.ecomway.touristo.room.entities.CitiesTable;
 import com.ecomway.touristo.room.entities.TouringPointsTable;
 
-@Database(entities = {CitiesTable.class, TouringPointsTable.class},exportSchema = false, version = 1)
+@Database(entities = {CitiesTable.class, TouringPointsTable.class},exportSchema = false, version = 2)
 public abstract class RoomTouristoDB extends RoomDatabase {
     public abstract CitiesTableDao citiesTableDao();
     public abstract TouringPointsTableDao touringPointsTableDao();
