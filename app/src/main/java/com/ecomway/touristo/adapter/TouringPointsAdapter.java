@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RatingBar;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -41,10 +42,11 @@ public class TouringPointsAdapter extends RecyclerView.Adapter<TouringPointsAdap
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        TouringPointsModel tp=_list.get(position);
-        globalPosition=position;
+        TouringPointsModel tp = _list.get(position);
+        globalPosition = position;
         // Log.i("chkmodel",cm.getImage().toString());
         holder.txttourname1.setText(tp.getTouingPointName());
+        holder.rating.setRating(Float.parseFloat(tp.getRating()!=null?tp.getRating():"0"));
         RequestOptions myOptions = new RequestOptions()
                 .centerCrop()
                 .placeholder(R.drawable.cityimgg)
@@ -62,18 +64,20 @@ public class TouringPointsAdapter extends RecyclerView.Adapter<TouringPointsAdap
         return _list.size();
     }
 
-    public  class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder {
         com.ecomway.touristo.customfonts.MyTextView txttourname1;
         de.hdodenhof.circleimageview.CircleImageView tourpic;
+        RatingBar rating;
 
         public ViewHolder(View itemView) {
             super(itemView);
             txttourname1 = itemView.findViewById(R.id.txttourname1);
             tourpic = itemView.findViewById(R.id.tourpic);
+            rating=itemView.findViewById(R.id.rating);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    context.startActivity(new Intent(context, TouringPointsDetailActivity.class).putExtra("touringName", txttourname1.getText().toString()).putExtra("type",""));
+                    context.startActivity(new Intent(context, TouringPointsDetailActivity.class).putExtra("touringName", txttourname1.getText().toString()).putExtra("type", ""));
                 }
             });
         }

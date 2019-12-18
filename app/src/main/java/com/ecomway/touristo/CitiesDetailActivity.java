@@ -125,7 +125,7 @@ public class CitiesDetailActivity extends AppCompatActivity {
         imgweather.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(CitiesDetailActivity.this, WeatherActivity.class).putExtra("city", txtCityName.getText().toString().trim()));
+                startActivity(new Intent(CitiesDetailActivity.this, WeatherActivity.class).putExtra("city", txtCityName.getText().toString().trim()).putExtra("tourname", "no"));
                 overridePendingTransition(R.anim.right_in, R.anim.left_out);
             }
         });

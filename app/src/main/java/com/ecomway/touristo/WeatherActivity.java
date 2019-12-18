@@ -28,6 +28,8 @@ public class WeatherActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather);
+        //getIntent().getExtras().getString("tourname")
+        //getString("city")
         CITY= Objects.requireNonNull(getIntent().getExtras()).getString("city");
         addressTxt = findViewById(R.id.address);
         updated_atTxt = findViewById(R.id.updated_at);
@@ -87,7 +89,12 @@ public class WeatherActivity extends AppCompatActivity {
 
 
                 /* Populating extracted data into our views */
-                addressTxt.setText(address);
+        if(!getIntent().getExtras().getString("tourname").equals("no")) {
+            addressTxt.setText(getIntent().getExtras().getString("tourname"));
+        }else {
+            addressTxt.setText(address);
+        }
+
                 updated_atTxt.setText(updatedAtText);
                 statusTxt.setText(weatherDescription.toUpperCase());
                 tempTxt.setText(temp);

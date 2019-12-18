@@ -47,6 +47,17 @@
                 android:id="@+id/txttourname1"
                 android:text="Lahour"
                 />
+            <RatingBar
+                android:id="@+id/rating"
+                android:layout_below="@+id/txttourname1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:theme="@style/RatingBar"
+                android:numStars="5"
+                style="?attr/ratingBarStyleSmall"
+                android:layout_centerHorizontal="true"
+                android:rating="0"
+                android:stepSize="0.5" />
         </RelativeLayout>
 
     </LinearLayout>

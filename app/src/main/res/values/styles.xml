@@ -54,4 +54,9 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:textColor">#FFFFFF</item>
     </style>
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/colorAccent</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+    </style>
 </resources>

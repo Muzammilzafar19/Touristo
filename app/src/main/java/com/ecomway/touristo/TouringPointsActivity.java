@@ -38,7 +38,7 @@ public class TouringPointsActivity extends AppCompatActivity {
 
         if(Objects.requireNonNull(getIntent().getExtras()).getString("type")!=null&&!Objects.requireNonNull(getIntent().getExtras()).getString("type").equals(""))
         {
-            adapter=new TouringPointsAdapter(this,populateTourListByType(Objects.requireNonNull(getIntent().getExtras()).getString("type")));
+            adapter=new TouringPointsAdapter(this,populateTourListByType(Objects.requireNonNull(getIntent().getExtras()).getString("type").toLowerCase()));
         }
         else {
             adapter=new TouringPointsAdapter(this,populateCityList());

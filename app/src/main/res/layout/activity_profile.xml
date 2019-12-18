@@ -1,212 +1,234 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
     <FrameLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="200dp"
         android:background="#000000">
+
         <ImageView
             android:id="@+id/img"
             android:layout_width="match_parent"
             android:layout_height="200dp"
+            android:alpha="0.8"
             android:scaleType="fitXY"
-            android:src="@drawable/drawable_purple_gradient"
-            android:alpha="0.8" />
+            android:src="@drawable/drawable_purple_gradient" />
+
         <androidx.appcompat.widget.Toolbar
-android:layout_marginTop="10dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
             <ImageView
                 android:id="@+id/gobackplease"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
                 android:background="?android:attr/selectableItemBackground"
-                android:src="@drawable/ic_arrow"
-                android:layout_marginLeft="20dp"/>
+                android:src="@drawable/ic_arrow" />
+
             <com.ecomway.touristo.customfonts.MyTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Personal Info"
-                android:textSize="20dp"
                 android:layout_gravity="center"
                 android:gravity="bottom"
-                android:textColor="#fff"/>
+                android:text="Personal Info"
+                android:textColor="#fff"
+                android:textSize="20dp" />
+
             <TextView
+                android:id="@+id/txtsave"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Save"
-                android:textSize="16dp"
-                android:background="?android:attr/selectableItemBackground"
-                android:id="@+id/txtsave"
                 android:layout_gravity="right"
                 android:layout_marginRight="20dp"
-                android:textColor="#fff"/>
+                android:background="?android:attr/selectableItemBackground"
+                android:text="Save"
+                android:textColor="#fff"
+                android:textSize="16dp" />
         </androidx.appcompat.widget.Toolbar>
-
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
+            android:orientation="horizontal">
+
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/circleview"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/person"
+                android:layout_marginLeft="135dp"
 
                 android:layout_marginTop="100dp"
-                android:layout_marginLeft="135dp"
                 android:layout_marginRight="135dp"
                 android:layout_marginBottom="1dp"
-                app:view_shadowRadius="2dp"
+                android:src="@drawable/person"
+                app:view_borderColor="#cccccc"
+                app:view_borderWidth="2dp"
                 app:view_shadowDx="2dp"
                 app:view_shadowDy="0dp"
-                app:view_borderWidth="2dp"
-                app:view_borderColor="#cccccc"
+                app:view_shadowRadius="2dp"
 
                 />
         </LinearLayout>
     </FrameLayout>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:overScrollMode="never"
-        >
+        android:overScrollMode="never">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+
                 <com.ecomway.touristo.customfonts.MyTextView
                     android:layout_width="0dp"
-                    android:layout_weight="0.35"
                     android:layout_height="wrap_content"
-                    android:text="Name"
-                    android:textSize="14sp"
                     android:layout_marginLeft="15dp"
-                    android:padding="20dp"/>
+                    android:layout_weight="0.35"
+                    android:padding="20dp"
+                    android:text="Name"
+                    android:textSize="14sp" />
+
                 <com.ecomway.touristo.customfonts.MyEditText
+                    android:id="@+id/txteditName"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:id="@+id/txteditName"
-                    android:textSize="14sp"
+                    android:background="#00000000"
                     android:hint="Enter Full Name"
                     android:inputType="textEmailAddress"
                     android:padding="16dp"
-                    android:layout_gravity="center"
-                    android:background="#00000000"/>
+                    android:textSize="14sp" />
             </LinearLayout>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.1dp"
-                android:background="#ACACAC"/>
+                android:background="#ACACAC" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+
                 <com.ecomway.touristo.customfonts.MyTextView
                     android:layout_width="0dp"
-                    android:layout_weight="0.35"
                     android:layout_height="wrap_content"
-                    android:text="Email"
-                    android:textSize="14sp"
                     android:layout_marginLeft="15dp"
-                    android:padding="20dp"/>
+                    android:layout_weight="0.35"
+                    android:padding="20dp"
+                    android:text="Email"
+                    android:textSize="14sp" />
+
                 <com.ecomway.touristo.customfonts.MyEditText
+                    android:id="@+id/editEmail"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:textSize="14sp"
-                    android:id="@+id/editEmail"
+                    android:background="#00000000"
                     android:hint="Enter Email"
                     android:inputType="textEmailAddress"
                     android:padding="16dp"
-                    android:layout_gravity="center"
-                    android:background="#00000000"/>
+                    android:textSize="14sp" />
             </LinearLayout>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.1dp"
-                android:background="#ACACAC"/>
+                android:background="#ACACAC" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+
                 <com.ecomway.touristo.customfonts.MyTextView
+                    android:id="@+id/myTextView"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
                     android:layout_weight="0.5"
+                    android:padding="20dp"
                     android:text="Age"
-                    android:textSize="14sp"
-                    android:padding="20dp"
-                    android:layout_marginLeft="15dp"
-                    android:id="@+id/myTextView" />
+                    android:textSize="14sp" />
+
                 <com.ecomway.touristo.customfonts.MyEditText
-                    android:layout_width="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:inputType="number"
-                    android:textSize="14sp"
                     android:id="@+id/editage"
-                    android:hint="Enter Age"
-                    android:background="#00000000"
-                    android:padding="16dp"/>
-            </LinearLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0.1dp"
-                android:background="#ACACAC"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <com.ecomway.touristo.customfonts.MyTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:text="Country"
-                    android:textSize="14sp"
-                    android:padding="20dp"
-                    android:layout_marginLeft="15dp"
-                    android:id="@+id/myTextCountry" />
-                <com.ecomway.touristo.customfonts.MyEditText
-                    android:layout_width="wrap_content"
                     android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:textSize="14sp"
-                    android:id="@+id/editcountry"
-                    android:hint="Enter Country"
                     android:background="#00000000"
-                    android:padding="16dp"/>
+                    android:hint="Enter Age"
+                    android:inputType="number"
+                    android:padding="16dp"
+                    android:textSize="14sp" />
             </LinearLayout>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.1dp"
-                android:background="#ACACAC"/>
+                android:background="#ACACAC" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+
                 <com.ecomway.touristo.customfonts.MyTextView
+                    android:id="@+id/myTextCountry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="0.5"
+                    android:padding="20dp"
+                    android:text="Country"
+                    android:textSize="14sp" />
+
+                <com.ecomway.touristo.customfonts.MyEditText
+                    android:id="@+id/editcountry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#00000000"
+                    android:hint="Enter Country"
+                    android:padding="16dp"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="#ACACAC" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.ecomway.touristo.customfonts.MyTextView
+                    android:id="@+id/txtAge"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.3"
-                    android:text="Gender"
-                    android:textSize="14sp"
-                    android:padding="20dp"
                     android:layout_marginLeft="15dp"
-                    android:id="@+id/txtAge" />
+                    android:layout_weight="0.3"
+                    android:padding="20dp"
+                    android:text="Gender"
+                    android:textSize="14sp" />
 
                 <CheckBox
                     android:id="@+id/checkmale"
@@ -214,16 +236,15 @@ android:layout_marginTop="10dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="50dp"
                     android:text="Male" />
+
                 <CheckBox
                     android:id="@+id/checkfemale"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="60dp"
-                    android:text="Female"
-                    />
+                    android:text="Female" />
 
             </LinearLayout>
-
 
 
         </LinearLayout>

@@ -24,4 +24,10 @@
         <color name="colorRed_900">#B71C1C</color>
         <!-- ./ 4th Gradient color -->
 
+        <color name="rating1">#0e9d58</color>
+        <color name="rating2">#bfd047</color>
+        <color name="rating3">#ffc105</color>
+        <color name="rating4">#ef7e14</color>
+        <color name="rating5">#d36259</color>
+
 </resources>
